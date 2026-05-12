@@ -180,14 +180,12 @@ export function QueObtenes() {
             hidden: {},
             visible: { transition: { staggerChildren: 0.15 } },
           }}
+          className="grid grid-cols-1 md:grid-cols-3"
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
             gap: "16px",
             width: "100%",
             marginTop: "8px",
           }}
-          className="grid-cols-1 md:grid-cols-3"
         >
           {iconItems.map((item) => {
             const Icon = item.icon;

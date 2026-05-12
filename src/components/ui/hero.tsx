@@ -169,9 +169,8 @@ export function Hero() {
           {/* Tres tarjetas */}
           <motion.div
             variants={itemVariants}
+            className="grid grid-cols-1 md:grid-cols-3"
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(3, 1fr)",
               gap: "16px",
               width: "100%",
               maxWidth: "920px",
