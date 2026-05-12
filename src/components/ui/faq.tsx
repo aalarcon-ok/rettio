@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus } from "lucide-react";
 
@@ -8,22 +8,22 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-const faqs = [
+const faqs: { q: string; a: React.ReactNode }[] = [
   {
     q: "¿Tengo que cambiar el software o las planillas que ya uso?",
-    a: "No. Trabajamos sobre lo que ya existe — ya sea un software de gestión, Excel o Google Drive. Construimos encima de esa base la estructura que falta para que la información sea útil al momento de decidir.",
+    a: <>No. <strong style={{ color: "#FAF8F5" }}>Trabajamos sobre lo que ya existe</strong> — ya sea un software de gestión, Excel o Google Drive. Construimos encima de esa base la estructura que falta para que la información sea útil al momento de decidir.</>,
   },
   {
     q: "¿Esto reemplaza a mi estudio contable?",
-    a: "Todo lo contrario. Trabajamos en paralelo con tu estudio contable — cada uno desde su lugar, con funciones que se complementan. En muchos casos, coordinamos directamente con ellos para que la información fluya mejor y el dueño del negocio tenga una visión completa de su empresa.",
+    a: <>Todo lo contrario. <strong style={{ color: "#FAF8F5" }}>Trabajamos en paralelo con tu estudio contable</strong> — cada uno desde su lugar, con funciones que se complementan. En muchos casos, coordinamos directamente con ellos para que la información fluya mejor y el dueño del negocio tenga una visión completa de su empresa.</>,
   },
   {
     q: "¿Qué pasa si hago el Diagnóstico y decido no continuar?",
-    a: "El análisis queda en tu poder. Un mapa claro de dónde está tu empresa, qué información falta y qué habría que hacer para tener control operativo. Sin costos adicionales, sin compromiso de seguir.",
+    a: <><strong style={{ color: "#FAF8F5" }}>El análisis queda en tu poder</strong>. Un mapa claro de dónde está tu empresa, qué información falta y qué habría que hacer para tener control operativo. Sin costos adicionales, <strong style={{ color: "#FAF8F5" }}>sin compromiso de seguir</strong>.</>,
   },
   {
     q: "¿Cuándo veo resultados concretos?",
-    a: "Al cerrar el Diagnóstico ya tenés algo real en la mano: un análisis concreto de tu situación, no una promesa. Al cerrar la Implementación, tenés visibilidad permanente de tus números. Con el Acompañamiento, esa información empieza a mover decisiones.",
+    a: <>Al cerrar el <strong style={{ color: "#FAF8F5" }}>Diagnóstico</strong> ya tenés algo real en la mano: un <strong style={{ color: "#FAF8F5" }}>análisis concreto</strong> de tu situación, no una promesa. Al cerrar la <strong style={{ color: "#FAF8F5" }}>Implementación</strong>, tenés <strong style={{ color: "#FAF8F5" }}>visibilidad permanente</strong> de tus números. Con el <strong style={{ color: "#FAF8F5" }}>Acompañamiento</strong>, esa información empieza a <strong style={{ color: "#FAF8F5" }}>mover decisiones</strong>.</>,
   },
 ];
 

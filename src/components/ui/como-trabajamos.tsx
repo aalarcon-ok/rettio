@@ -192,13 +192,8 @@ export function ComoTrabajamos() {
                 {/* Separador móvil — visible solo entre fases, no después de la última */}
                 {idx < phases.length - 1 && (
                   <div
-                    className="block md:hidden"
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      padding: "8px 0",
-                    }}
+                    className="flex justify-center items-center md:hidden"
+                    style={{ padding: "8px 0" }}
                   >
                     <ChevronDown size={28} color="#C9A84C" style={{ opacity: 0.6 }} />
                   </div>
