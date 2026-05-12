@@ -103,7 +103,7 @@ export function CTAFinal() {
       <section style={{
         position: "relative",
         backgroundColor: "#0D0D12",
-        padding: "120px 24px",
+        padding: "60px 24px",
         overflow: "hidden",
         borderTop: "1px solid rgba(255,255,255,0.06)",
       }}>

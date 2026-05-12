@@ -1,6 +1,7 @@
 "use client";
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { Fragment } from "react";
+import { motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 const itemVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -35,15 +36,6 @@ const phases = [
 ];
 
 export function ComoTrabajamos() {
-  const timelineRef = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: timelineRef,
-    offset: ["start 0.8", "end 0.4"],
-  });
-
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-
   return (
     <section
       id="como-trabajamos"
@@ -78,7 +70,7 @@ export function ComoTrabajamos() {
         </motion.h2>
 
         {/* Timeline */}
-        <div ref={timelineRef} style={{ position: "relative", width: "100%" }}>
+        <div style={{ position: "relative", width: "100%" }}>
           {/* Línea horizontal — solo desktop */}
           <div
             className="hidden md:block"
@@ -93,135 +85,125 @@ export function ComoTrabajamos() {
             }}
           />
 
-          {/* Línea vertical animada — solo visible en mobile */}
-          <div
-            className="block md:hidden"
-            style={{
-              position: "absolute",
-              left: "50%",
-              transform: "translateX(-50%)",
-              top: 0,
-              bottom: 0,
-              width: "1px",
-              backgroundColor: "rgba(201,168,76,0.1)",
-              zIndex: 0,
-            }}
-          >
-            <motion.div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: lineHeight,
-                background: "linear-gradient(180deg, #C9A84C, rgba(201,168,76,0.3))",
-              }}
-            />
-          </div>
-
           <div
             className="grid grid-cols-1 md:grid-cols-3"
             style={{ gap: "24px", position: "relative" }}
           >
             {phases.map((phase, idx) => (
-              <motion.div
-                key={phase.num}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-80px" }}
-                variants={itemVariants}
-                transition={{ delay: idx * 0.15 }}
-                className="items-center text-center"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "20px",
-                  position: "relative",
-                  zIndex: 1,
-                }}
-              >
+              <Fragment key={phase.num}>
                 <motion.div
-                  initial={{ scale: 0.5, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.15 + 0.1, duration: 0.5, ease: "backOut" }}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-80px" }}
+                  variants={itemVariants}
+                  transition={{ delay: idx * 0.15 }}
+                  className="items-center text-center"
                   style={{
-                    width: "80px",
-                    height: "80px",
-                    borderRadius: "50%",
-                    backgroundColor: "#0D0D12",
-                    border: "1px solid rgba(201,168,76,0.3)",
                     display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontFamily: "'Geist', sans-serif",
-                    fontSize: "26px",
-                    fontWeight: 700,
-                    color: "#C9A84C",
-                    letterSpacing: "-0.02em",
-                    boxShadow: "0 0 24px rgba(201,168,76,0.08)",
-                    flexShrink: 0,
+                    flexDirection: "column",
+                    gap: "20px",
+                    position: "relative",
+                    zIndex: 1,
                   }}
                 >
-                  {phase.num}
-                </motion.div>
+                  <motion.div
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.15 + 0.1, duration: 0.5, ease: "backOut" }}
+                    style={{
+                      width: "80px",
+                      height: "80px",
+                      borderRadius: "50%",
+                      backgroundColor: "#0D0D12",
+                      border: "1px solid rgba(201,168,76,0.3)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontFamily: "'Geist', sans-serif",
+                      fontSize: "26px",
+                      fontWeight: 700,
+                      color: "#C9A84C",
+                      letterSpacing: "-0.02em",
+                      boxShadow: "0 0 24px rgba(201,168,76,0.08)",
+                      flexShrink: 0,
+                    }}
+                  >
+                    {phase.num}
+                  </motion.div>
 
-                <div>
-                  <h3 style={{
-                    fontFamily: "'Geist', sans-serif",
-                    fontSize: "clamp(20px, 2vw, 24px)",
-                    fontWeight: 700,
-                    color: "#FAF8F5",
-                    marginBottom: "10px",
-                    letterSpacing: "-0.01em",
-                  }}>{phase.title}</h3>
-                  <div style={{ display: "flex", justifyContent: "center", gap: "8px", flexWrap: "wrap" }}>
-                    <span style={{
-                      fontFamily: "'Poppins', sans-serif",
-                      fontSize: "11px",
-                      padding: "4px 12px",
-                      backgroundColor: "rgba(255,255,255,0.06)",
-                      border: "1px solid rgba(255,255,255,0.1)",
-                      borderRadius: "999px",
-                      color: "rgba(239,236,226,0.7)",
-                      fontWeight: 500,
-                    }}>{phase.duration}</span>
-                    {phase.price && (
+                  <div>
+                    <h3 style={{
+                      fontFamily: "'Geist', sans-serif",
+                      fontSize: "clamp(20px, 2vw, 24px)",
+                      fontWeight: 700,
+                      color: "#FAF8F5",
+                      marginBottom: "10px",
+                      letterSpacing: "-0.01em",
+                    }}>{phase.title}</h3>
+                    <div style={{ display: "flex", justifyContent: "center", gap: "8px", flexWrap: "wrap" }}>
                       <span style={{
                         fontFamily: "'Poppins', sans-serif",
                         fontSize: "11px",
                         padding: "4px 12px",
-                        backgroundColor: "rgba(201,168,76,0.12)",
-                        border: "1px solid rgba(201,168,76,0.3)",
+                        backgroundColor: "rgba(255,255,255,0.06)",
+                        border: "1px solid rgba(255,255,255,0.1)",
                         borderRadius: "999px",
-                        color: "#C9A84C",
+                        color: "rgba(239,236,226,0.7)",
                         fontWeight: 500,
-                      }}>{phase.price}</span>
-                    )}
+                      }}>{phase.duration}</span>
+                      {phase.price && (
+                        <span style={{
+                          fontFamily: "'Poppins', sans-serif",
+                          fontSize: "11px",
+                          padding: "4px 12px",
+                          backgroundColor: "rgba(201,168,76,0.12)",
+                          border: "1px solid rgba(201,168,76,0.3)",
+                          borderRadius: "999px",
+                          color: "#C9A84C",
+                          fontWeight: 500,
+                        }}>{phase.price}</span>
+                      )}
+                    </div>
                   </div>
-                </div>
 
-                <p style={{
-                  fontFamily: "'Poppins', sans-serif",
-                  fontSize: "14px",
-                  color: "rgba(239,236,226,0.6)",
-                  lineHeight: 1.7,
-                  maxWidth: "300px",
-                  margin: 0,
-                }}>{phase.desc}</p>
-
-                {phase.note && (
                   <p style={{
                     fontFamily: "'Poppins', sans-serif",
-                    fontSize: "12px",
-                    fontStyle: "italic",
-                    color: "rgba(201,168,76,0.65)",
-                    lineHeight: 1.6,
-                    maxWidth: "260px",
+                    fontSize: "14px",
+                    color: "rgba(239,236,226,0.6)",
+                    lineHeight: 1.7,
+                    maxWidth: "300px",
                     margin: 0,
-                  }}>{phase.note}</p>
+                  }}>{phase.desc}</p>
+
+                  {phase.note && (
+                    <p style={{
+                      fontFamily: "'Poppins', sans-serif",
+                      fontSize: "12px",
+                      fontStyle: "italic",
+                      color: "rgba(201,168,76,0.65)",
+                      lineHeight: 1.6,
+                      maxWidth: "260px",
+                      margin: 0,
+                    }}>{phase.note}</p>
+                  )}
+                </motion.div>
+
+                {/* Separador móvil — visible solo entre fases, no después de la última */}
+                {idx < phases.length - 1 && (
+                  <div
+                    className="block md:hidden"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      padding: "8px 0",
+                    }}
+                  >
+                    <ChevronDown size={28} color="#C9A84C" style={{ opacity: 0.6 }} />
+                  </div>
                 )}
-              </motion.div>
+              </Fragment>
             ))}
           </div>
         </div>
