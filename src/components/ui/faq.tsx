@@ -23,7 +23,7 @@ const faqs: { q: string; a: React.ReactNode }[] = [
   },
   {
     q: "¿Cuándo veo resultados concretos?",
-    a: <>Al cerrar el <strong style={{ color: "#FAF8F5" }}>Diagnóstico</strong> ya tenés algo real en la mano: un <strong style={{ color: "#FAF8F5" }}>análisis concreto</strong> de tu situación, no una promesa. Al cerrar la <strong style={{ color: "#FAF8F5" }}>Implementación</strong>, tenés <strong style={{ color: "#FAF8F5" }}>visibilidad permanente</strong> de tus números. Con el <strong style={{ color: "#FAF8F5" }}>Acompañamiento</strong>, esa información empieza a <strong style={{ color: "#FAF8F5" }}>mover decisiones</strong>.</>,
+    a: <>Al cerrar el <strong style={{ color: "#FAF8F5", fontWeight: 700 }}>Diagnóstico</strong> ya tenés algo real en la mano: un <strong style={{ color: "rgba(250,248,245,0.65)", fontWeight: 500 }}>análisis concreto</strong> de tu situación, no una promesa. Al cerrar la <strong style={{ color: "#FAF8F5", fontWeight: 700 }}>Implementación</strong>, tenés <strong style={{ color: "rgba(250,248,245,0.65)", fontWeight: 500 }}>visibilidad permanente</strong> de tus números. Con el <strong style={{ color: "#FAF8F5", fontWeight: 700 }}>Acompañamiento</strong>, esa información empieza a <strong style={{ color: "rgba(250,248,245,0.65)", fontWeight: 500 }}>mover decisiones</strong>.</>,
   },
 ];
 
