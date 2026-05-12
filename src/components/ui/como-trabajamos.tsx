@@ -98,11 +98,13 @@ export function ComoTrabajamos() {
             className="block md:hidden"
             style={{
               position: "absolute",
-              left: "39px",
+              left: "50%",
+              transform: "translateX(-50%)",
               top: 0,
               bottom: 0,
               width: "1px",
               backgroundColor: "rgba(201,168,76,0.1)",
+              zIndex: 0,
             }}
           >
             <motion.div
@@ -129,7 +131,7 @@ export function ComoTrabajamos() {
                 viewport={{ once: true, margin: "-80px" }}
                 variants={itemVariants}
                 transition={{ delay: idx * 0.15 }}
-                className="md:items-center md:text-center items-start text-left"
+                className="items-center text-center"
                 style={{
                   display: "flex",
                   flexDirection: "column",

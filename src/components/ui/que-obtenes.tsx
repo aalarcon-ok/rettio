@@ -152,26 +152,6 @@ export function QueObtenes() {
           ))}
         </motion.div>
 
-        <motion.p
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          variants={titleVariants}
-          style={{
-            fontFamily: "'Poppins', sans-serif",
-            fontSize: "clamp(15px, 1.5vw, 17px)",
-            fontStyle: "italic",
-            lineHeight: 1.8,
-            color: "rgba(239,236,226,0.5)",
-            textAlign: "center",
-            maxWidth: "620px",
-            margin: 0,
-          }}
-        >
-          Indicadores, reportes y dashboards diseñados para quien decide,
-          en el lenguaje con el que pensás tu negocio.
-        </motion.p>
-
         <motion.div
           initial="hidden"
           whileInView="visible"

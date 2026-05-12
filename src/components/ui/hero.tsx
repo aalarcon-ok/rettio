@@ -13,18 +13,20 @@ const itemVariants: Variants = {
 
 export function Hero() {
   return (
-    <section style={{
-      position: "relative",
-      isolation: "isolate",
-      display: "flex",
-      minHeight: "100vh",
-      width: "100%",
-      alignItems: "center",
-      justifyContent: "center",
-      overflow: "hidden",
-      paddingTop: "80px",
-      backgroundColor: "#0D0D12",
-    }}>
+    <section
+      className="hero-bg-animated"
+      style={{
+        position: "relative",
+        isolation: "isolate",
+        display: "flex",
+        minHeight: "100vh",
+        width: "100%",
+        alignItems: "center",
+        justifyContent: "center",
+        overflow: "hidden",
+        paddingTop: "80px",
+      }}
+    >
       {/* Video de fondo */}
       <video
         autoPlay
