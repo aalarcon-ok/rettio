@@ -216,7 +216,7 @@ export function CTAFinal() {
       <footer style={{
         backgroundColor: "#0D0D12",
         borderTop: "1px solid rgba(255,255,255,0.05)",
-        paddingTop: "40px",
+        paddingTop: "60px",
         paddingBottom: "40px",
         paddingLeft: "24px",
         paddingRight: "24px",
@@ -237,6 +237,7 @@ export function CTAFinal() {
               width: "auto",
               objectFit: "contain",
               opacity: 0.85,
+              marginBottom: "24px",
             }}
           />
 
