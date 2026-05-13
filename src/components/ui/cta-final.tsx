@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { Mail, Phone } from "lucide-react";
 
 const itemVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -211,11 +212,14 @@ export function CTAFinal() {
         </div>
       </section>
 
-      {/* Footer con logo completo */}
+      {/* Footer */}
       <footer style={{
         backgroundColor: "#0D0D12",
         borderTop: "1px solid rgba(255,255,255,0.05)",
-        padding: "48px 24px 32px",
+        paddingTop: "40px",
+        paddingBottom: "40px",
+        paddingLeft: "24px",
+        paddingRight: "24px",
       }}>
         <div style={{
           maxWidth: "1100px",
@@ -223,18 +227,53 @@ export function CTAFinal() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          gap: "24px",
+          gap: "12px",
         }}>
           <img
             src="/assets/logo_obsidiana_champan_completo_cropped.png"
             alt="rettio"
             style={{
-              height: "52px",
+              height: "60px",
               width: "auto",
               objectFit: "contain",
-              opacity: 0.7,
+              opacity: 0.85,
             }}
           />
+
+          <a
+            href="mailto:hablemos@rettio.pro"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              fontFamily: "'Poppins', sans-serif",
+              fontSize: "13px",
+              color: "rgba(239,236,226,0.55)",
+              textDecoration: "none",
+            }}
+          >
+            <Mail size={14} color="#C9A84C" />
+            hablemos@rettio.pro
+          </a>
+
+          <a
+            href="https://wa.me/59892922583"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              fontFamily: "'Poppins', sans-serif",
+              fontSize: "13px",
+              color: "rgba(239,236,226,0.55)",
+              textDecoration: "none",
+            }}
+          >
+            <Phone size={14} color="#C9A84C" />
+            +598 92 922 583
+          </a>
+
           <span style={{
             fontFamily: "'Poppins', sans-serif",
             fontSize: "12px",
