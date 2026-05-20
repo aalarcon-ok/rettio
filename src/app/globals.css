@@ -131,8 +131,8 @@
 }
 
 @keyframes hero-bg-pulse {
-  0%, 100% { background-color: #0D0D12; }
-  50%       { background-color: #111118; }
+  0%, 100% { background-color: #080D1A; }
+  50%       { background-color: #0D1225; }
 }
 
 .hero-bg-animated {
@@ -140,9 +140,9 @@
 }
 
 :root {
-  --rettio-bg: #0D0D12;
+  --rettio-bg: #080D1A;
   --rettio-surface: #2A2A35;
   --rettio-text: #FAF8F5;
-  --rettio-text-secondary: #EFECE2;
-  --rettio-accent: #C9A84C;
+  --rettio-text-secondary: #FAF8F5;
+  --rettio-accent: #7C3AED;
 }

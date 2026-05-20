@@ -6,7 +6,7 @@ interface AnimatedUnderlineProps {
   color?: string;
 }
 
-export function AnimatedUnderline({ children, color = "#C9A84C" }: AnimatedUnderlineProps) {
+export function AnimatedUnderline({ children, color = "#7C3AED" }: AnimatedUnderlineProps) {
   return (
     <span style={{ position: "relative", display: "inline-block" }}>
       <span>{children}</span>

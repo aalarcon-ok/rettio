@@ -37,36 +37,44 @@ const iconItems = [
 
 const bullets = [
   <>
-    <strong style={{ color: "#FAF8F5" }}>Tu negocio</strong>
-    {" "}no se paraliza cuando vos no estás.
-  </>,
-  <>
-    Un lugar donde mirar{" "}
-    <strong style={{ color: "#FAF8F5" }}>el estado del negocio</strong>
-    , sin depender de que alguien te lo arme.
-  </>,
-  <>
     <strong style={{ color: "#FAF8F5" }}>Decidís con respaldo</strong>
-    , no solo con experiencia e intuición.
+    {", no solo con experiencia e intuición."}
   </>,
   <>
-    Números en los que podés confiar,{" "}
-    <strong style={{ color: "#FAF8F5" }}>respaldados por estructura contable</strong>.
+    {"Un lugar donde mirar "}
+    <strong style={{ color: "#FAF8F5" }}>el estado del negocio</strong>
+    {", sin depender de que alguien te lo arme."}
   </>,
   <>
-    <strong style={{ color: "#FAF8F5" }}>Un sistema a medida</strong>
-    , construido sobre lo que ya existe en tu empresa.
+    {"Reportes escritos para quien decide — "}
+    <strong style={{ color: "#FAF8F5" }}>sin tecnicismos, con contexto para actuar</strong>
+    {"."}
   </>,
   <>
-    Reportes escritos para quien decide —{" "}
-    <strong style={{ color: "#FAF8F5" }}>sin tecnicismos, con contexto para actuar</strong>.
+    <strong style={{ color: "#FAF8F5" }}>Tu negocio</strong>
+    {" no se paraliza cuando vos no estás."}
   </>,
 ];
 
 export function QueObtenes() {
   return (
-    <section style={{ backgroundColor: "#0D0D12", padding: "80px 24px" }}>
+    <section style={{ position: "relative", backgroundColor: "#080D1A", padding: "80px 24px", overflow: "hidden" }}>
+      {/* Gradiente ambiental violeta — detrás del título */}
       <div style={{
+        position: "absolute",
+        top: "40px",
+        left: "50%",
+        transform: "translateX(-50%)",
+        width: "700px",
+        height: "700px",
+        background: "radial-gradient(circle at 50% 50%, rgba(124,58,237,0.08) 0%, transparent 50%)",
+        pointerEvents: "none",
+        zIndex: 0,
+      }} />
+
+      <div style={{
+        position: "relative",
+        zIndex: 1,
         maxWidth: "780px",
         margin: "0 auto",
         display: "flex",
@@ -106,7 +114,7 @@ export function QueObtenes() {
               key={idx}
               variants={itemVariants}
               whileHover={{
-                backgroundColor: "rgba(201,168,76,0.04)",
+                backgroundColor: "rgba(124,58,237,0.04)",
                 x: 4,
               }}
               transition={{ duration: 0.2 }}
@@ -127,8 +135,8 @@ export function QueObtenes() {
                 whileInView={{
                   opacity: 1,
                   boxShadow: idx === 0
-                    ? "0 0 16px rgba(201,168,76,0.6)"
-                    : "0 0 12px rgba(201,168,76,0.5)",
+                    ? "0 0 16px rgba(124,58,237,0.6)"
+                    : "0 0 12px rgba(124,58,237,0.5)",
                 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.12, duration: 0.4 }}
@@ -136,7 +144,7 @@ export function QueObtenes() {
                   width: idx === 0 ? "9px" : "7px",
                   height: idx === 0 ? "9px" : "7px",
                   borderRadius: "50%",
-                  backgroundColor: "#C9A84C",
+                  backgroundColor: "#7C3AED",
                   flexShrink: 0,
                   marginTop: idx === 0 ? "10px" : "9px",
                 }}
@@ -144,7 +152,7 @@ export function QueObtenes() {
               <p style={{
                 fontFamily: "'Poppins', sans-serif",
                 fontSize: idx === 0 ? "20px" : "clamp(15px, 1.5vw, 17px)",
-                color: idx === 0 ? "#FAF8F5" : "rgba(239,236,226,0.8)",
+                color: idx === 0 ? "#FAF8F5" : "rgba(250,248,245,0.8)",
                 lineHeight: 1.7,
                 margin: 0,
               }}>{bullet}</p>
@@ -177,8 +185,8 @@ export function QueObtenes() {
                   visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.25, 0.1, 0.25, 1] as const } },
                 }}
                 whileHover={{
-                  backgroundColor: "rgba(201,168,76,0.06)",
-                  borderColor: "rgba(201,168,76,0.25)",
+                  backgroundColor: "rgba(124,58,237,0.06)",
+                  borderColor: "rgba(124,58,237,0.25)",
                   y: -2,
                 }}
                 transition={{ duration: 0.2 }}
@@ -190,7 +198,8 @@ export function QueObtenes() {
                   gap: "14px",
                   padding: "28px 20px",
                   backgroundColor: "rgba(42,42,53,0.4)",
-                  border: "1px solid rgba(255,255,255,0.07)",
+                  border: "1px solid rgba(124,58,237,0.25)",
+                  borderTop: "2px solid #7C3AED",
                   borderRadius: "16px",
                   cursor: "default",
                 }}
@@ -199,13 +208,13 @@ export function QueObtenes() {
                   width: "52px",
                   height: "52px",
                   borderRadius: "50%",
-                  backgroundColor: "rgba(201,168,76,0.1)",
-                  border: "1px solid rgba(201,168,76,0.2)",
+                  backgroundColor: "rgba(124,58,237,0.1)",
+                  border: "1px solid rgba(124,58,237,0.2)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                 }}>
-                  <Icon size={22} color="#C9A84C" strokeWidth={1.5} />
+                  <Icon size={22} color="#7C3AED" strokeWidth={1.5} />
                 </div>
 
                 <p style={{
@@ -220,7 +229,7 @@ export function QueObtenes() {
                 <p style={{
                   fontFamily: "'Poppins', sans-serif",
                   fontSize: "13px",
-                  color: "rgba(239,236,226,0.55)",
+                  color: "rgba(250,248,245,0.55)",
                   lineHeight: 1.6,
                   margin: 0,
                 }}>{item.desc}</p>
@@ -232,7 +241,7 @@ export function QueObtenes() {
         <div style={{
           width: "48px",
           height: "1px",
-          backgroundColor: "rgba(201,168,76,0.3)",
+          backgroundColor: "rgba(124,58,237,0.3)",
           margin: "0 auto",
         }} />
       </div>

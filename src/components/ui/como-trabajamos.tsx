@@ -30,7 +30,7 @@ const phases = [
     title: "Acompañamiento",
     duration: "Mensual",
     price: null,
-    desc: "Una vez por mes revisamos los números juntos. No para reportar — para interpretar qué dicen y qué decisiones tienen más sentido tomar a partir de eso.",
+    desc: "Cada mes interpretamos juntos qué dicen los números y qué decisiones tienen más sentido tomar a partir de eso.",
     note: null,
   },
 ];
@@ -39,9 +39,24 @@ export function ComoTrabajamos() {
   return (
     <section
       id="como-trabajamos"
-      style={{ backgroundColor: "#0D0D12", padding: "80px 24px" }}
+      style={{ position: "relative", backgroundColor: "#080D1A", padding: "80px 24px", overflow: "hidden" }}
     >
+      {/* Gradiente ambiental teal — detrás de los números */}
       <div style={{
+        position: "absolute",
+        top: 0,
+        left: "50%",
+        transform: "translateX(-50%)",
+        width: "800px",
+        height: "800px",
+        background: "radial-gradient(circle at 50% 0%, rgba(13,79,92,0.10) 0%, transparent 50%)",
+        pointerEvents: "none",
+        zIndex: 0,
+      }} />
+
+      <div style={{
+        position: "relative",
+        zIndex: 1,
         maxWidth: "1100px",
         margin: "0 auto",
         display: "flex",
@@ -66,7 +81,7 @@ export function ComoTrabajamos() {
             margin: 0,
           }}
         >
-          Un proceso en tres fases, sin genéricos.
+          Un proceso en tres fases.
         </motion.h2>
 
         {/* Timeline */}
@@ -80,7 +95,7 @@ export function ComoTrabajamos() {
               left: "10%",
               right: "10%",
               height: "1px",
-              background: "linear-gradient(90deg, transparent, rgba(201,168,76,0.3), transparent)",
+              background: "linear-gradient(90deg, transparent, rgba(124,58,237,0.3), transparent)",
               zIndex: 0,
             }}
           />
@@ -115,17 +130,17 @@ export function ComoTrabajamos() {
                       width: "80px",
                       height: "80px",
                       borderRadius: "50%",
-                      backgroundColor: "#0D0D12",
-                      border: "1px solid rgba(201,168,76,0.3)",
+                      backgroundColor: "#080D1A",
+                      border: "1px solid rgba(124,58,237,0.3)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       fontFamily: "'Geist', sans-serif",
                       fontSize: "26px",
                       fontWeight: 700,
-                      color: "#C9A84C",
+                      color: "#7C3AED",
                       letterSpacing: "-0.02em",
-                      boxShadow: "0 0 24px rgba(201,168,76,0.08)",
+                      boxShadow: "0 0 24px rgba(124,58,237,0.08)",
                       flexShrink: 0,
                     }}
                   >
@@ -149,7 +164,7 @@ export function ComoTrabajamos() {
                         backgroundColor: "rgba(255,255,255,0.06)",
                         border: "1px solid rgba(255,255,255,0.1)",
                         borderRadius: "999px",
-                        color: "rgba(239,236,226,0.7)",
+                        color: "rgba(250,248,245,0.7)",
                         fontWeight: 500,
                       }}>{phase.duration}</span>
                       {phase.price && (
@@ -157,10 +172,10 @@ export function ComoTrabajamos() {
                           fontFamily: "'Poppins', sans-serif",
                           fontSize: "11px",
                           padding: "4px 12px",
-                          backgroundColor: "rgba(201,168,76,0.12)",
-                          border: "1px solid rgba(201,168,76,0.3)",
+                          backgroundColor: "rgba(124,58,237,0.12)",
+                          border: "1px solid rgba(124,58,237,0.3)",
                           borderRadius: "999px",
-                          color: "#C9A84C",
+                          color: "#8B5CF6",
                           fontWeight: 500,
                         }}>{phase.price}</span>
                       )}
@@ -170,7 +185,7 @@ export function ComoTrabajamos() {
                   <p style={{
                     fontFamily: "'Poppins', sans-serif",
                     fontSize: "14px",
-                    color: "rgba(239,236,226,0.6)",
+                    color: "rgba(250,248,245,0.6)",
                     lineHeight: 1.7,
                     maxWidth: "300px",
                     margin: 0,
@@ -181,7 +196,7 @@ export function ComoTrabajamos() {
                       fontFamily: "'Poppins', sans-serif",
                       fontSize: "12px",
                       fontStyle: "italic",
-                      color: "rgba(201,168,76,0.65)",
+                      color: "rgba(124,58,237,0.65)",
                       lineHeight: 1.6,
                       maxWidth: "260px",
                       margin: 0,
@@ -195,7 +210,7 @@ export function ComoTrabajamos() {
                     className="flex justify-center items-center md:hidden"
                     style={{ padding: "8px 0" }}
                   >
-                    <ChevronDown size={28} color="#C9A84C" style={{ opacity: 0.6 }} />
+                    <ChevronDown size={28} color="#7C3AED" style={{ opacity: 0.6 }} />
                   </div>
                 )}
               </Fragment>
@@ -224,8 +239,8 @@ export function ComoTrabajamos() {
               display: "inline-flex",
               alignItems: "center",
               gap: "8px",
-              backgroundColor: "#C9A84C",
-              color: "#0D0D12",
+              backgroundColor: "#7C3AED",
+              color: "#FAF8F5",
               fontFamily: "'Poppins', sans-serif",
               fontSize: "14px",
               fontWeight: 500,
@@ -247,8 +262,8 @@ export function ComoTrabajamos() {
           </a>
           <p style={{
             fontFamily: "'Poppins', sans-serif",
-            fontSize: "11px",
-            color: "rgba(239,236,226,0.4)",
+            fontSize: "14px",
+            color: "rgba(250,248,245,0.60)",
             textAlign: "center",
             margin: 0,
           }}>

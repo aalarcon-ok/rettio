@@ -14,6 +14,10 @@ const faqs: { q: string; a: React.ReactNode }[] = [
     a: <>No. <strong style={{ color: "#FAF8F5" }}>Trabajamos sobre lo que ya existe</strong> — ya sea un software de gestión, Excel o Google Drive. Construimos encima de esa base la estructura que falta para que la información sea útil al momento de decidir.</>,
   },
   {
+    q: "¿Esto es para empresas que ya tienen todo ordenado?",
+    a: <>Todo lo contrario. <strong style={{ color: "#FAF8F5" }}>El diagnóstico está pensado para empresas que sienten que les falta claridad</strong> — no para las que ya tienen un sistema ordenado. Si tenés información dispersa, dependés de que alguien te arme los números, o simplemente no sabés bien cómo está tu empresa, ese es exactamente el punto de partida.</>,
+  },
+  {
     q: "¿Esto reemplaza a mi estudio contable?",
     a: <>Todo lo contrario. <strong style={{ color: "#FAF8F5" }}>Trabajamos en paralelo con tu estudio contable</strong> — cada uno desde su lugar, con funciones que se complementan. En muchos casos, coordinamos directamente con ellos para que la información fluya mejor y el dueño del negocio tenga una visión completa de su empresa.</>,
   },
@@ -31,7 +35,7 @@ export function FAQ() {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
-    <section style={{ backgroundColor: "#0D0D12", padding: "80px 24px" }}>
+    <section style={{ backgroundColor: "#080D1A", padding: "80px 24px" }}>
       <div style={{
         maxWidth: "780px",
         margin: "0 auto",
@@ -100,7 +104,7 @@ export function FAQ() {
                     transition={{ duration: 0.3 }}
                     style={{ flexShrink: 0 }}
                   >
-                    <Plus size={20} color={isOpen ? "#C9A84C" : "rgba(239,236,226,0.5)"} />
+                    <Plus size={20} color={isOpen ? "#7C3AED" : "rgba(250,248,245,0.5)"} />
                   </motion.div>
                 </button>
                 <AnimatePresence initial={false}>
@@ -115,7 +119,7 @@ export function FAQ() {
                       <p style={{
                         fontFamily: "'Poppins', sans-serif",
                         fontSize: "15px",
-                        color: "rgba(239,236,226,0.65)",
+                        color: "rgba(250,248,245,0.65)",
                         lineHeight: 1.8,
                         paddingBottom: "24px",
                         paddingRight: "40px",

@@ -47,7 +47,7 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201,168,76,0.06) 0%, transparent 70%)",
+            "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(124,58,237,0.06) 0%, transparent 70%)",
         }}
       />
 
@@ -55,7 +55,7 @@ export default function Hero() {
         {/* Eyebrow */}
         <motion.p
           {...fadeIn(0, 0.6)}
-          className="mb-10 uppercase tracking-[0.1em] text-[#EFECE2]"
+          className="mb-10 uppercase tracking-[0.1em] text-[#FAF8F5]"
           style={{ fontFamily: "var(--font-poppins)", fontSize: "11px", opacity: 0 }}
         >
           Para empresas que crecen y necesitan entender sus números
@@ -85,7 +85,7 @@ export default function Hero() {
           {/* Paragraph 1 */}
           <motion.p
             {...fadeUp(0.4, 0.6)}
-            className="text-[16px] md:text-[18px] leading-[1.85] text-[#EFECE2]"
+            className="text-[16px] md:text-[18px] leading-[1.85] text-[#FAF8F5]"
             style={{ fontFamily: "var(--font-poppins)" }}
           >
             La información contable y financiera a la que hoy tenés acceso
@@ -93,13 +93,13 @@ export default function Hero() {
             fue construida para mirar
             <br />
             <br />
-            <span style={{ color: "#C9A84C", fontWeight: 500 }}>
+            <span style={{ color: "#7C3AED", fontWeight: 500 }}>
               hacia atrás
             </span>{" "}
             — el histórico de lo que ya pasó
             <br />
             y{" "}
-            <span style={{ color: "#C9A84C", fontWeight: 500 }}>
+            <span style={{ color: "#7C3AED", fontWeight: 500 }}>
               hacia afuera
             </span>{" "}
             — cumplir con impuestos, organismos y bancos.
@@ -111,7 +111,7 @@ export default function Hero() {
             className="space-y-4"
           >
             <p
-              className="text-[16px] md:text-[18px] leading-[1.85] text-[#EFECE2]"
+              className="text-[16px] md:text-[18px] leading-[1.85] text-[#FAF8F5]"
               style={{ fontFamily: "var(--font-poppins)" }}
             >
               La mirada hacia adentro y hacia adelante
@@ -135,7 +135,7 @@ export default function Hero() {
         <motion.div {...fadeUp(0.7, 0.5)} className="mb-4">
           <a
             href="#como-trabajamos"
-            className="inline-block rounded-full bg-[#C9A84C] px-8 py-3.5 text-[#0D0D12] transition-opacity hover:opacity-90"
+            className="inline-block rounded-full bg-[#7C3AED] px-8 py-3.5 text-[#080D1A] transition-opacity hover:opacity-90"
             style={{ fontFamily: "var(--font-poppins)", fontSize: "14px", fontWeight: 500 }}
           >
             Conocé el proceso →
@@ -145,7 +145,7 @@ export default function Hero() {
         {/* Note */}
         <motion.p
           {...fadeIn(0.8, 0.5, 0.7)}
-          className="mb-0 text-[#EFECE2]"
+          className="mb-0 text-[#FAF8F5]"
           style={{ fontFamily: "var(--font-poppins)", fontSize: "12px", opacity: 0 }}
         >
           2 semanas · Sin compromiso de continuar · El análisis queda en tu poder
@@ -161,7 +161,7 @@ export default function Hero() {
               style={{ border: "1px solid rgba(255,255,255,0.06)" }}
             >
               <p
-                className="mb-[10px] uppercase text-[#C9A84C]"
+                className="mb-[10px] uppercase text-[#7C3AED]"
                 style={{
                   fontFamily: "var(--font-poppins)",
                   fontSize: "11px",
@@ -171,7 +171,7 @@ export default function Hero() {
                 {card.label}
               </p>
               <p
-                className="text-[#EFECE2]"
+                className="text-[#FAF8F5]"
                 style={{ fontFamily: "var(--font-poppins)", fontSize: "14px", lineHeight: "1.7" }}
               >
                 {card.text}

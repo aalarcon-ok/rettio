@@ -52,7 +52,16 @@ export function Hero() {
       <div style={{
         position: "absolute",
         inset: 0,
-        background: "linear-gradient(180deg, rgba(13,13,18,0.85) 0%, rgba(13,13,18,0.95) 100%)",
+        background: "linear-gradient(180deg, rgba(8,13,26,0.85) 0%, rgba(8,13,26,0.95) 100%)",
+        zIndex: 1,
+      }} />
+
+      {/* Gradiente ambiental teal — decorativo */}
+      <div style={{
+        position: "absolute",
+        inset: 0,
+        background: "radial-gradient(ellipse at 0% 0%, rgba(13,79,92,0.2) 0%, transparent 45%), radial-gradient(ellipse at 100% 100%, rgba(13,79,92,0.15) 0%, transparent 45%)",
+        pointerEvents: "none",
         zIndex: 1,
       }} />
 
@@ -81,19 +90,19 @@ export function Hero() {
             variants={itemVariants}
             style={{
               fontFamily: "'Poppins', sans-serif",
-              fontSize: "11px",
+              fontSize: "13px",
               fontWeight: 500,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "rgba(201,168,76,0.7)",
+              color: "#A78BFA",
               marginBottom: "32px",
               margin: "0 0 32px",
             }}
           >
-            Para empresas que crecen y necesitan claridad para decidir
+            La información de tu negocio, convertida en decisiones.
           </motion.p>
 
-          {/* Frase de posicionamiento */}
+          {/* Headline */}
           <motion.h1
             variants={itemVariants}
             style={{
@@ -107,33 +116,25 @@ export function Hero() {
               margin: "0 0 32px",
             }}
           >
-            Construimos el sistema de información{" "}
-            <span style={{
-              background: "linear-gradient(180deg, rgba(250,248,245,0.6) 0%, rgba(250,248,245,0.25) 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-              color: "transparent",
-            }}>
-              que tu empresa necesita
+            Tu negocio tiene las respuestas...{" "}
+            <span style={{ color: "rgba(250,248,245,0.88)" }}>
+              pero todavía no habla tu idioma.
             </span>
-            {" "}para dejar de decidir a ciegas.
           </motion.h1>
 
-          {/* Headline secundario */}
+          {/* Statement sección 2 */}
           <motion.p
             variants={itemVariants}
             style={{
               fontFamily: "'Poppins', sans-serif",
               fontSize: "clamp(15px, 1.6vw, 19px)",
               lineHeight: 1.7,
-              color: "rgba(239,236,226,0.7)",
+              color: "rgba(250,248,245,0.7)",
               maxWidth: "560px",
               margin: "0 0 44px",
             }}
           >
-            Los números están. Las respuestas a tus preguntas
-            <span style={{ color: "#C9A84C" }}>...</span> todavía no.
+            Construimos el sistema de información que tu empresa necesita para dejar de decidir a ciegas.
           </motion.p>
 
           {/* CTA */}
@@ -144,29 +145,43 @@ export function Hero() {
               display: "inline-flex",
               alignItems: "center",
               gap: "8px",
-              backgroundColor: "#C9A84C",
-              color: "#0D0D12",
+              backgroundColor: "#7C3AED",
+              color: "#FAF8F5",
               fontFamily: "'Poppins', sans-serif",
               fontSize: "14px",
               fontWeight: 500,
               padding: "14px 32px",
               borderRadius: "999px",
               textDecoration: "none",
-              boxShadow: "0 0 28px rgba(201,168,76,0.18)",
+              boxShadow: "0 0 28px rgba(124,58,237,0.25)",
               transition: "all 0.2s",
-              margin: "0 0 32px",
+              margin: "0 0 16px",
             }}
             onMouseOver={e => {
               e.currentTarget.style.transform = "translateY(-2px)";
-              e.currentTarget.style.boxShadow = "0 0 40px rgba(201,168,76,0.3)";
+              e.currentTarget.style.boxShadow = "0 0 40px rgba(124,58,237,0.4)";
             }}
             onMouseOut={e => {
               e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 0 28px rgba(201,168,76,0.18)";
+              e.currentTarget.style.boxShadow = "0 0 28px rgba(124,58,237,0.25)";
             }}
           >
             Conocé el proceso →
           </motion.a>
+
+          {/* Tag debajo del CTA */}
+          <motion.p
+            variants={itemVariants}
+            style={{
+              fontFamily: "'Poppins', sans-serif",
+              fontSize: "14px",
+              color: "rgba(250,248,245,0.60)",
+              textAlign: "center",
+              margin: "0 0 44px",
+            }}
+          >
+            Para empresas que crecen y necesitan claridad para decidir.
+          </motion.p>
 
           {/* Tres tarjetas */}
           <motion.div
@@ -185,11 +200,11 @@ export function Hero() {
               },
               {
                 label: "Sin cambiar nada",
-                text: "Trabajamos sobre el software, Excel o Drive que ya usás. Sin imponer herramientas nuevas.",
+                text: "Trabajamos sobre el software, las planillas y las herramientas que ya usás. Sin imponer nada nuevo.",
               },
               {
-                label: "Para decidir",
-                text: "Un sistema de información pensado para el dueño, no para cumplir con terceros.",
+                label: "Para quien decide",
+                text: "Pensado para vos, no para cumplir con terceros.",
               },
             ].map((card) => (
               <div
@@ -209,7 +224,7 @@ export function Hero() {
                   fontWeight: 500,
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
-                  color: "#C9A84C",
+                  color: "#7C3AED",
                   margin: "0 0 12px",
                 }}>
                   {card.label}
