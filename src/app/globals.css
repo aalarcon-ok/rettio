@@ -130,19 +130,38 @@
   }
 }
 
+/* rettio — tokens dark (default) */
+:root {
+  --rettio-bg:              #060A16;
+  --rettio-bg-secondary:    #0D1E30;
+  --rettio-accent:          #197EA8;
+  --rettio-accent-hover:    #25A8C8;
+  --rettio-text:            #FFFFFF;
+  --rettio-text-secondary:  rgba(255,255,255,0.65);
+  --rettio-text-muted:      rgba(255,255,255,0.40);
+  --rettio-border:          rgba(25,126,168,0.20);
+  --rettio-border-subtle:   rgba(255,255,255,0.07);
+  --rettio-surface:         rgba(13,30,48,0.50);
+  --rettio-nav-bg:          rgba(6,10,22,0.85);
+  --rettio-nav-bg-scrolled: rgba(6,10,22,0.97);
+}
+
+
+body {
+  background-color: var(--rettio-bg);
+  color: var(--rettio-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section, nav, footer {
+  transition: background-color 0.3s ease;
+}
+
 @keyframes hero-bg-pulse {
-  0%, 100% { background-color: #080D1A; }
-  50%       { background-color: #0D1225; }
+  0%, 100% { background-color: var(--rettio-bg); }
+  50%       { background-color: var(--rettio-bg-secondary); }
 }
 
 .hero-bg-animated {
   animation: hero-bg-pulse 8s ease-in-out infinite;
-}
-
-:root {
-  --rettio-bg: #080D1A;
-  --rettio-surface: #2A2A35;
-  --rettio-text: #FAF8F5;
-  --rettio-text-secondary: #FAF8F5;
-  --rettio-accent: #7C3AED;
 }

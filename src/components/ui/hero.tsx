@@ -52,15 +52,15 @@ export function Hero() {
       <div style={{
         position: "absolute",
         inset: 0,
-        background: "linear-gradient(180deg, rgba(8,13,26,0.85) 0%, rgba(8,13,26,0.95) 100%)",
+        background: "linear-gradient(180deg, rgba(6,10,22,0.85) 0%, rgba(6,10,22,0.95) 100%)",
         zIndex: 1,
       }} />
 
-      {/* Gradiente ambiental teal — decorativo */}
+      {/* Gradiente ambiental teal */}
       <div style={{
         position: "absolute",
         inset: 0,
-        background: "radial-gradient(ellipse at 0% 0%, rgba(13,79,92,0.2) 0%, transparent 45%), radial-gradient(ellipse at 100% 100%, rgba(13,79,92,0.15) 0%, transparent 45%)",
+        background: "radial-gradient(ellipse at 0% 0%, rgba(25,126,168,0.12) 0%, transparent 45%), radial-gradient(ellipse at 100% 100%, rgba(25,126,168,0.08) 0%, transparent 45%)",
         pointerEvents: "none",
         zIndex: 1,
       }} />
@@ -94,8 +94,7 @@ export function Hero() {
               fontWeight: 500,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#A78BFA",
-              marginBottom: "32px",
+              color: "var(--rettio-accent)",
               margin: "0 0 32px",
             }}
           >
@@ -111,25 +110,22 @@ export function Hero() {
               fontWeight: 800,
               lineHeight: 1.1,
               letterSpacing: "-0.03em",
-              color: "#FAF8F5",
+              color: "var(--rettio-text)",
               maxWidth: "920px",
               margin: "0 0 32px",
             }}
           >
-            Tu negocio tiene las respuestas...{" "}
-            <span style={{ color: "rgba(250,248,245,0.88)" }}>
-              pero todavía no habla tu idioma.
-            </span>
+            Tu negocio tiene las respuestas... pero todavía no habla tu idioma.
           </motion.h1>
 
-          {/* Statement sección 2 */}
+          {/* Statement */}
           <motion.p
             variants={itemVariants}
             style={{
               fontFamily: "'Poppins', sans-serif",
               fontSize: "clamp(15px, 1.6vw, 19px)",
               lineHeight: 1.7,
-              color: "rgba(250,248,245,0.7)",
+              color: "var(--rettio-text-secondary)",
               maxWidth: "560px",
               margin: "0 0 44px",
             }}
@@ -145,25 +141,27 @@ export function Hero() {
               display: "inline-flex",
               alignItems: "center",
               gap: "8px",
-              backgroundColor: "#7C3AED",
-              color: "#FAF8F5",
+              backgroundColor: "var(--rettio-accent)",
+              color: "#FFFFFF",
               fontFamily: "'Poppins', sans-serif",
               fontSize: "14px",
               fontWeight: 500,
               padding: "14px 32px",
               borderRadius: "999px",
               textDecoration: "none",
-              boxShadow: "0 0 28px rgba(124,58,237,0.25)",
+              boxShadow: "0 0 28px rgba(25,126,168,0.25)",
               transition: "all 0.2s",
               margin: "0 0 16px",
             }}
             onMouseOver={e => {
               e.currentTarget.style.transform = "translateY(-2px)";
-              e.currentTarget.style.boxShadow = "0 0 40px rgba(124,58,237,0.4)";
+              e.currentTarget.style.boxShadow = "0 0 40px rgba(25,126,168,0.4)";
+              e.currentTarget.style.backgroundColor = "var(--rettio-accent-hover)";
             }}
             onMouseOut={e => {
               e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 0 28px rgba(124,58,237,0.25)";
+              e.currentTarget.style.boxShadow = "0 0 28px rgba(25,126,168,0.25)";
+              e.currentTarget.style.backgroundColor = "var(--rettio-accent)";
             }}
           >
             Conocé el proceso →
@@ -175,7 +173,7 @@ export function Hero() {
             style={{
               fontFamily: "'Poppins', sans-serif",
               fontSize: "14px",
-              color: "rgba(250,248,245,0.60)",
+              color: "var(--rettio-text-muted)",
               textAlign: "center",
               margin: "0 0 44px",
             }}
@@ -210,8 +208,8 @@ export function Hero() {
               <div
                 key={card.label}
                 style={{
-                  backgroundColor: "rgba(42,42,53,0.4)",
-                  border: "1px solid rgba(255,255,255,0.07)",
+                  backgroundColor: "var(--rettio-surface)",
+                  border: "1px solid var(--rettio-border-subtle)",
                   borderRadius: "14px",
                   padding: "28px 24px",
                   backdropFilter: "blur(12px)",
@@ -224,7 +222,7 @@ export function Hero() {
                   fontWeight: 500,
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
-                  color: "#7C3AED",
+                  color: "var(--rettio-accent)",
                   margin: "0 0 12px",
                 }}>
                   {card.label}
@@ -232,7 +230,7 @@ export function Hero() {
                 <p style={{
                   fontFamily: "'Poppins', sans-serif",
                   fontSize: "15px",
-                  color: "#FAF8F5",
+                  color: "var(--rettio-text)",
                   lineHeight: 1.7,
                   margin: 0,
                 }}>

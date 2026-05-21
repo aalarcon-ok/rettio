@@ -39,7 +39,7 @@ export function ComoTrabajamos() {
   return (
     <section
       id="como-trabajamos"
-      style={{ position: "relative", backgroundColor: "#080D1A", padding: "80px 24px", overflow: "hidden" }}
+      style={{ position: "relative", backgroundColor: "var(--rettio-bg)", padding: "80px 24px", overflow: "hidden" }}
     >
       {/* Gradiente ambiental teal — detrás de los números */}
       <div style={{
@@ -49,7 +49,7 @@ export function ComoTrabajamos() {
         transform: "translateX(-50%)",
         width: "800px",
         height: "800px",
-        background: "radial-gradient(circle at 50% 0%, rgba(13,79,92,0.10) 0%, transparent 50%)",
+        background: "radial-gradient(circle at 50% 0%, rgba(25,126,168,0.10) 0%, transparent 50%)",
         pointerEvents: "none",
         zIndex: 0,
       }} />
@@ -75,7 +75,7 @@ export function ComoTrabajamos() {
             fontWeight: 700,
             lineHeight: 1.15,
             letterSpacing: "-0.02em",
-            color: "#FAF8F5",
+            color: "var(--rettio-text)",
             textAlign: "center",
             maxWidth: "680px",
             margin: 0,
@@ -95,7 +95,7 @@ export function ComoTrabajamos() {
               left: "10%",
               right: "10%",
               height: "1px",
-              background: "linear-gradient(90deg, transparent, rgba(124,58,237,0.3), transparent)",
+              background: "linear-gradient(90deg, transparent, rgba(25,126,168,0.3), transparent)",
               zIndex: 0,
             }}
           />
@@ -130,17 +130,17 @@ export function ComoTrabajamos() {
                       width: "80px",
                       height: "80px",
                       borderRadius: "50%",
-                      backgroundColor: "#080D1A",
-                      border: "1px solid rgba(124,58,237,0.3)",
+                      backgroundColor: "var(--rettio-bg)",
+                      border: "1px solid var(--rettio-border)",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
                       fontFamily: "'Geist', sans-serif",
                       fontSize: "26px",
                       fontWeight: 700,
-                      color: "#7C3AED",
+                      color: "var(--rettio-accent)",
                       letterSpacing: "-0.02em",
-                      boxShadow: "0 0 24px rgba(124,58,237,0.08)",
+                      boxShadow: "0 0 24px rgba(25,126,168,0.08)",
                       flexShrink: 0,
                     }}
                   >
@@ -152,7 +152,7 @@ export function ComoTrabajamos() {
                       fontFamily: "'Geist', sans-serif",
                       fontSize: "clamp(20px, 2vw, 24px)",
                       fontWeight: 700,
-                      color: "#FAF8F5",
+                      color: "var(--rettio-text)",
                       marginBottom: "10px",
                       letterSpacing: "-0.01em",
                     }}>{phase.title}</h3>
@@ -161,10 +161,10 @@ export function ComoTrabajamos() {
                         fontFamily: "'Poppins', sans-serif",
                         fontSize: "11px",
                         padding: "4px 12px",
-                        backgroundColor: "rgba(255,255,255,0.06)",
+                        backgroundColor: "var(--rettio-border-subtle)",
                         border: "1px solid rgba(255,255,255,0.1)",
                         borderRadius: "999px",
-                        color: "rgba(250,248,245,0.7)",
+                        color: "var(--rettio-text-secondary)",
                         fontWeight: 500,
                       }}>{phase.duration}</span>
                       {phase.price && (
@@ -172,10 +172,10 @@ export function ComoTrabajamos() {
                           fontFamily: "'Poppins', sans-serif",
                           fontSize: "11px",
                           padding: "4px 12px",
-                          backgroundColor: "rgba(124,58,237,0.12)",
-                          border: "1px solid rgba(124,58,237,0.3)",
+                          backgroundColor: "rgba(25,126,168,0.12)",
+                          border: "1px solid rgba(25,126,168,0.3)",
                           borderRadius: "999px",
-                          color: "#8B5CF6",
+                          color: "#25A8C8",
                           fontWeight: 500,
                         }}>{phase.price}</span>
                       )}
@@ -185,7 +185,7 @@ export function ComoTrabajamos() {
                   <p style={{
                     fontFamily: "'Poppins', sans-serif",
                     fontSize: "14px",
-                    color: "rgba(250,248,245,0.6)",
+                    color: "var(--rettio-text-secondary)",
                     lineHeight: 1.7,
                     maxWidth: "300px",
                     margin: 0,
@@ -196,7 +196,7 @@ export function ComoTrabajamos() {
                       fontFamily: "'Poppins', sans-serif",
                       fontSize: "12px",
                       fontStyle: "italic",
-                      color: "rgba(124,58,237,0.65)",
+                      color: "rgba(25,126,168,0.75)",
                       lineHeight: 1.6,
                       maxWidth: "260px",
                       margin: 0,
@@ -204,13 +204,13 @@ export function ComoTrabajamos() {
                   )}
                 </motion.div>
 
-                {/* Separador móvil — visible solo entre fases, no después de la última */}
+                {/* Separador móvil */}
                 {idx < phases.length - 1 && (
                   <div
                     className="flex justify-center items-center md:hidden"
                     style={{ padding: "8px 0" }}
                   >
-                    <ChevronDown size={28} color="#7C3AED" style={{ opacity: 0.6 }} />
+                    <ChevronDown size={28} color="var(--rettio-accent)" style={{ opacity: 0.6 }} />
                   </div>
                 )}
               </Fragment>
@@ -239,22 +239,22 @@ export function ComoTrabajamos() {
               display: "inline-flex",
               alignItems: "center",
               gap: "8px",
-              backgroundColor: "#7C3AED",
-              color: "#FAF8F5",
+              backgroundColor: "var(--rettio-accent)",
+              color: "#FFFFFF",
               fontFamily: "'Poppins', sans-serif",
               fontSize: "14px",
               fontWeight: 500,
               padding: "13px 32px",
               borderRadius: "999px",
               textDecoration: "none",
-              transition: "transform 0.2s, opacity 0.2s",
+              transition: "background-color 0.2s, transform 0.2s",
             }}
             onMouseOver={e => {
-              e.currentTarget.style.opacity = "0.9";
+              e.currentTarget.style.backgroundColor = "var(--rettio-accent-hover)";
               e.currentTarget.style.transform = "translateY(-1px)";
             }}
             onMouseOut={e => {
-              e.currentTarget.style.opacity = "1";
+              e.currentTarget.style.backgroundColor = "var(--rettio-accent)";
               e.currentTarget.style.transform = "translateY(0)";
             }}
           >
@@ -263,7 +263,7 @@ export function ComoTrabajamos() {
           <p style={{
             fontFamily: "'Poppins', sans-serif",
             fontSize: "14px",
-            color: "rgba(250,248,245,0.60)",
+            color: "var(--rettio-text-secondary)",
             textAlign: "center",
             margin: 0,
           }}>

@@ -13,7 +13,7 @@ export function ShimmerText({ children, duration = 2, delay = 1, style }: Shimme
     <motion.span
       style={{
         display: "inline-block",
-        background: "linear-gradient(90deg, #FAF8F5 0%, #FAF8F5 35%, #7C3AED 50%, #FAF8F5 65%, #FAF8F5 100%)",
+        background: "linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 35%, #197EA8 50%, #FFFFFF 65%, #FFFFFF 100%)",
         backgroundSize: "200% 100%",
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",

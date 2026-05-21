@@ -17,7 +17,7 @@ export function Navbar() {
       left: 0,
       right: 0,
       zIndex: 50,
-      backgroundColor: scrolled ? "rgba(8,13,26,0.97)" : "rgba(8,13,26,0.85)",
+      backgroundColor: scrolled ? "rgba(6,10,22,0.97)" : "rgba(6,10,22,0.85)",
       backdropFilter: "blur(20px)",
       borderBottom: "1px solid rgba(255,255,255,0.06)",
       padding: "10px 24px",
@@ -33,14 +33,10 @@ export function Navbar() {
       }}>
         <a href="/" style={{ display: "flex", alignItems: "center" }}>
           <img
-            src="/assets/rettio_logo_dark_v2.png"
+            src="/assets/rettio_logo_dark_v3.png"
             alt="rettio"
             className="h-7 md:h-8"
-            style={{
-              width: "auto",
-              objectFit: "contain",
-              display: "block",
-            }}
+            style={{ width: "auto", objectFit: "contain", display: "block" }}
           />
         </a>
 
@@ -52,20 +48,20 @@ export function Navbar() {
             fontFamily: "'Poppins', sans-serif",
             fontSize: "13px",
             fontWeight: 500,
-            color: "#7C3AED",
-            border: "1px solid rgba(124,58,237,0.4)",
+            color: "#197EA8",
+            border: "1px solid rgba(25,126,168,0.4)",
             padding: "8px 20px",
             borderRadius: "999px",
             textDecoration: "none",
             transition: "all 0.2s",
           }}
           onMouseOver={e => {
-            e.currentTarget.style.backgroundColor = "rgba(124,58,237,0.1)";
-            e.currentTarget.style.borderColor = "rgba(124,58,237,0.7)";
+            e.currentTarget.style.backgroundColor = "rgba(25,126,168,0.1)";
+            e.currentTarget.style.borderColor = "rgba(25,126,168,0.7)";
           }}
           onMouseOut={e => {
             e.currentTarget.style.backgroundColor = "transparent";
-            e.currentTarget.style.borderColor = "rgba(124,58,237,0.4)";
+            e.currentTarget.style.borderColor = "rgba(25,126,168,0.4)";
           }}
         >
           Hablemos

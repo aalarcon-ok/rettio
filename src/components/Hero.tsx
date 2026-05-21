@@ -47,7 +47,7 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(124,58,237,0.06) 0%, transparent 70%)",
+            "radial-gradient(ellipse 80% 50% at 50% -10%, rgba(25,126,168,0.06) 0%, transparent 70%)",
         }}
       />
 
@@ -93,13 +93,13 @@ export default function Hero() {
             fue construida para mirar
             <br />
             <br />
-            <span style={{ color: "#7C3AED", fontWeight: 500 }}>
+            <span style={{ color: "#197EA8", fontWeight: 500 }}>
               hacia atrás
             </span>{" "}
             — el histórico de lo que ya pasó
             <br />
             y{" "}
-            <span style={{ color: "#7C3AED", fontWeight: 500 }}>
+            <span style={{ color: "#197EA8", fontWeight: 500 }}>
               hacia afuera
             </span>{" "}
             — cumplir con impuestos, organismos y bancos.
@@ -135,7 +135,7 @@ export default function Hero() {
         <motion.div {...fadeUp(0.7, 0.5)} className="mb-4">
           <a
             href="#como-trabajamos"
-            className="inline-block rounded-full bg-[#7C3AED] px-8 py-3.5 text-[#080D1A] transition-opacity hover:opacity-90"
+            className="inline-block rounded-full bg-[#197EA8] px-8 py-3.5 text-[#060A16] transition-opacity hover:opacity-90"
             style={{ fontFamily: "var(--font-poppins)", fontSize: "14px", fontWeight: 500 }}
           >
             Conocé el proceso →
@@ -161,7 +161,7 @@ export default function Hero() {
               style={{ border: "1px solid rgba(255,255,255,0.06)" }}
             >
               <p
-                className="mb-[10px] uppercase text-[#7C3AED]"
+                className="mb-[10px] uppercase text-[#197EA8]"
                 style={{
                   fontFamily: "var(--font-poppins)",
                   fontSize: "11px",

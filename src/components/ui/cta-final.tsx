@@ -49,10 +49,10 @@ export function CTAFinal() {
     canvas.addEventListener("touchmove", onTouchMove, { passive: true });
 
     const waves = [
-      { offset: 0,             amplitude: 45, frequency: 0.004,  color: "rgba(124,58,237,0.18)" },
-      { offset: Math.PI / 2,  amplitude: 55, frequency: 0.003,  color: "rgba(124,58,237,0.12)" },
-      { offset: Math.PI,      amplitude: 38, frequency: 0.0035, color: "rgba(250,248,245,0.05)" },
-      { offset: Math.PI * 1.5, amplitude: 48, frequency: 0.0025, color: "rgba(124,58,237,0.08)" },
+      { offset: 0,              amplitude: 45, frequency: 0.004,  color: "rgba(25,126,168,0.18)" },
+      { offset: Math.PI / 2,   amplitude: 55, frequency: 0.003,  color: "rgba(25,126,168,0.12)" },
+      { offset: Math.PI,       amplitude: 38, frequency: 0.0035, color: "rgba(255,255,255,0.05)" },
+      { offset: Math.PI * 1.5, amplitude: 48, frequency: 0.0025, color: "rgba(25,126,168,0.08)" },
     ];
 
     const draw = () => {
@@ -82,7 +82,7 @@ export function CTAFinal() {
         ctx.lineWidth = 1.5;
         ctx.strokeStyle = wave.color;
         ctx.shadowBlur = 30;
-        ctx.shadowColor = "rgba(124,58,237,0.3)";
+        ctx.shadowColor = "rgba(25,126,168,0.3)";
         ctx.stroke();
       });
 
@@ -103,10 +103,10 @@ export function CTAFinal() {
     <>
       <section style={{
         position: "relative",
-        backgroundColor: "#080D1A",
+        backgroundColor: "var(--rettio-bg)",
         padding: "60px 24px",
         overflow: "hidden",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
+        borderTop: "1px solid var(--rettio-border-subtle)",
       }}>
         {/* Canvas de ondas */}
         <canvas
@@ -129,19 +129,19 @@ export function CTAFinal() {
           left: 0,
           right: 0,
           height: "200px",
-          background: "linear-gradient(to bottom, transparent, rgba(13,79,92,0.08))",
+          background: "linear-gradient(to bottom, transparent, rgba(25,126,168,0.08))",
           pointerEvents: "none",
         }} />
 
-        {/* Luminosidad teal difusa — esquina inferior derecha */}
+        {/* Luminosidad teal — esquina inferior derecha */}
         <div style={{
           position: "absolute",
           inset: 0,
-          background: "radial-gradient(circle at 80% 80%, rgba(13,79,92,0.12) 0%, transparent 60%)",
+          background: "radial-gradient(circle at 80% 80%, rgba(25,126,168,0.12) 0%, transparent 60%)",
           pointerEvents: "none",
         }} />
 
-        {/* Halo radial */}
+        {/* Halo radial central */}
         <div style={{
           position: "absolute",
           top: "50%",
@@ -149,7 +149,7 @@ export function CTAFinal() {
           transform: "translate(-50%, -50%)",
           width: "800px",
           height: "400px",
-          background: "radial-gradient(ellipse, rgba(124,58,237,0.06) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse, rgba(25,126,168,0.06) 0%, transparent 70%)",
           pointerEvents: "none",
         }} />
 
@@ -179,11 +179,10 @@ export function CTAFinal() {
               maxWidth: "900px",
             }}
           >
-            <span style={{ color: "#FAF8F5", display: "block" }}>
-              Tu negocio tiene las respuestas.
+            <span style={{ color: "var(--rettio-text)", display: "block" }}>
+              Tu empresa tiene las respuestas.
             </span>
-
-            <span style={{ display: "block", color: "rgba(250,248,245,0.88)" }}>
+            <span style={{ display: "block", color: "var(--rettio-text-secondary)" }}>
               Nosotros las traducimos al idioma con el que pensás tu negocio.
             </span>
           </motion.h2>
@@ -201,8 +200,8 @@ export function CTAFinal() {
               display: "inline-flex",
               alignItems: "center",
               gap: "10px",
-              backgroundColor: "#7C3AED",
-              color: "#FAF8F5",
+              backgroundColor: "var(--rettio-accent)",
+              color: "#FFFFFF",
               fontFamily: "'Poppins', sans-serif",
               fontSize: "16px",
               fontWeight: 500,
@@ -210,7 +209,7 @@ export function CTAFinal() {
               borderRadius: "999px",
               textDecoration: "none",
               marginTop: "16px",
-              boxShadow: "0 0 32px rgba(124,58,237,0.25)",
+              boxShadow: "0 0 32px rgba(25,126,168,0.25)",
             }}
           >
             Empecemos →
@@ -220,8 +219,8 @@ export function CTAFinal() {
 
       {/* Footer */}
       <footer style={{
-        backgroundColor: "#080D1A",
-        borderTop: "1px solid rgba(255,255,255,0.05)",
+        backgroundColor: "var(--rettio-bg)",
+        borderTop: "1px solid var(--rettio-border-subtle)",
         paddingTop: "60px",
         paddingBottom: "40px",
         paddingLeft: "24px",
@@ -236,7 +235,7 @@ export function CTAFinal() {
           gap: "12px",
         }}>
           <img
-            src="/assets/rettio_logo_dark_v2.png"
+            src="/assets/rettio_logo_dark_v3.png"
             alt="rettio"
             style={{
               height: "60px",
@@ -255,11 +254,11 @@ export function CTAFinal() {
               gap: "8px",
               fontFamily: "'Poppins', sans-serif",
               fontSize: "13px",
-              color: "rgba(250,248,245,0.55)",
+              color: "var(--rettio-text-secondary)",
               textDecoration: "none",
             }}
           >
-            <Mail size={14} color="#7C3AED" />
+            <Mail size={14} color="var(--rettio-accent)" />
             hablemos@rettio.pro
           </a>
 
@@ -273,18 +272,18 @@ export function CTAFinal() {
               gap: "8px",
               fontFamily: "'Poppins', sans-serif",
               fontSize: "13px",
-              color: "rgba(250,248,245,0.55)",
+              color: "var(--rettio-text-secondary)",
               textDecoration: "none",
             }}
           >
-            <Phone size={14} color="#7C3AED" />
+            <Phone size={14} color="var(--rettio-accent)" />
             +598 92 922 583
           </a>
 
           <span style={{
             fontFamily: "'Poppins', sans-serif",
             fontSize: "12px",
-            color: "rgba(250,248,245,0.3)",
+            color: "var(--rettio-text-muted)",
             textAlign: "center",
           }}>
             © 2026 rettio. Todos los derechos reservados.

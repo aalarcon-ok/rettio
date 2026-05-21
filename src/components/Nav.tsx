@@ -14,7 +14,7 @@ export default function Nav() {
           href="https://wa.me/59892922583"
           target="_blank"
           rel="noopener noreferrer"
-          className="rounded-full border border-[#7C3AED] px-5 py-2 text-sm text-[#7C3AED] transition-colors hover:bg-[#7C3AED]/10"
+          className="rounded-full border border-[#197EA8] px-5 py-2 text-sm text-[#197EA8] transition-colors hover:bg-[#197EA8]/10"
           style={{ fontFamily: "var(--font-poppins)", fontWeight: 400 }}
         >
           Hablemos
