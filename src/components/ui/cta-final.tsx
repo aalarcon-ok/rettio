@@ -177,6 +177,9 @@ export function CTAFinal() {
               letterSpacing: "-0.02em",
               textAlign: "center",
               maxWidth: "900px",
+              display: "flex",
+              flexDirection: "column",
+              gap: "12px",
             }}
           >
             <span style={{ color: "var(--rettio-text)", display: "block" }}>
