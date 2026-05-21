@@ -30,7 +30,7 @@ const phases = [
     title: "Acompañamiento",
     duration: "Mensual",
     price: null,
-    desc: "Cada mes interpretamos juntos qué dicen los números y qué decisiones tienen más sentido tomar a partir de eso.",
+    desc: "Claridad sobre qué pasó en tu negocio y qué decisiones tiene sentido tomar.",
     note: null,
   },
 ];
