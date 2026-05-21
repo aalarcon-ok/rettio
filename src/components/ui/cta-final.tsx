@@ -180,10 +180,10 @@ export function CTAFinal() {
             }}
           >
             <span style={{ color: "var(--rettio-text)", display: "block" }}>
-              Tu empresa tiene las respuestas.
+              Tu empresa tiene las respuestas...
             </span>
-            <span style={{ display: "block", color: "var(--rettio-text-secondary)" }}>
-              Nosotros las traducimos al idioma con el que pensás tu negocio.
+            <span style={{ display: "block", color: "var(--rettio-text)" }}>
+              nosotros las traducimos al idioma con el que pensás tu negocio.
             </span>
           </motion.h2>
 
